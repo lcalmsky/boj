@@ -75,6 +75,7 @@ public class Main {
 					if (--indegree[i] == 0) { // i번째 건물의 진입차수를 1 줄이고 그 값이 0이면 큐에
 												// 넣음
 						q.add(i);
+
 					}
 				}
 
