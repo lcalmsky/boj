@@ -1,4 +1,3 @@
-package boj10828_½ºÅÃ;
 
 /**
  * https://www.acmicpc.net/problem/10828
@@ -36,10 +35,13 @@ public class Main {
 
 		while (n-- > 0) {
 
-			String command = s.next();
-			int value = "push".equals(command) ? s.nextInt() : 0;
+			String cmd = s.next();
+			int value = "push".equals(cmd) ? s.nextInt() : 0;
+			boolean isEmpty = stack.isEmpty();
+			int size = stack.size();
+			int top = size - 1;
 
-			switch (command) {
+			switch (cmd) {
 			case "push": {
 
 				stack.add(value);
@@ -48,25 +50,25 @@ public class Main {
 			}
 			case "pop": {
 
-				System.out.println(stack.isEmpty() ? -1 : stack.remove(stack.size() - 1));
+				System.out.println(isEmpty ? -1 : stack.remove(top));
 				break;
 
 			}
 			case "size": {
 
-				System.out.println(stack.size());
+				System.out.println(size);
 				break;
 
 			}
 			case "empty": {
 
-				System.out.println(stack.isEmpty() ? 1 : 0);
+				System.out.println(isEmpty ? 1 : 0);
 				break;
 
 			}
 			case "top": {
 
-				System.out.println(stack.isEmpty() ? -1 : stack.get(stack.size() - 1));
+				System.out.println(isEmpty ? -1 : stack.get(top));
 				break;
 
 			}
