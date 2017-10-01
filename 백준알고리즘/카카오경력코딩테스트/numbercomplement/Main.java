@@ -1,5 +1,3 @@
-package numbercomplement;
-
 import java.util.Scanner;
 
 public class Main {
@@ -20,20 +18,17 @@ public class Main {
 
 		String complementStr = "";
 
-		while (n / 2 != 0) {
+		while (n != 0) {
 
 			complementStr = (1 - n % 2) + complementStr;
 			n /= 2;
-			if (n == 1) {
-				complementStr = (1 - 1) + complementStr;
-				break;
-			}
+
 		}
 
 		int complement = 0;
 
 		for (int i = complementStr.length() - 1, j = 0; i >= 0; i--, j++) {
-			
+
 			complement += (complementStr.charAt(i) - '0') * Math.pow(2, j);
 
 		}

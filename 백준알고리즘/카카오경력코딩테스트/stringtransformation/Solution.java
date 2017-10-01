@@ -1,5 +1,3 @@
-package stringtransformation;
-
 import java.util.Scanner;
 
 public class Solution {
@@ -23,14 +21,11 @@ public class Solution {
 			for (int j = 0; j < n; j++) {
 
 				char letter = s.charAt(j);
-				char changedLetter = (char) (letter + alphabetCnt[letter - 'a']);
+				int idx = letter - 'a';
+				char changedLetter = (char) (letter + alphabetCnt[idx]);
 				changedLetter = changedLetter > 'z' ? (char) (changedLetter - 26) : changedLetter;
 				res.append(changedLetter);
-				// alphabetCnt[letter - 'a']++;
-				alphabetCnt[letter - 'a']++;
-				if (alphabetCnt[letter - 'a'] > 26) {
-					alphabetCnt[letter - 'a'] = 1;
-				}
+				alphabetCnt[idx] = alphabetCnt[idx] > 26 ? 1 : alphabetCnt[idx] + 1;
 
 			}
 
