@@ -46,22 +46,3 @@ class Main {
 		in.close();
 	}
 }
-// public static void main(String[] args) {
-//
-// Scanner s = new Scanner(System.in);
-//
-// int n = s.nextInt();
-// int[] cost = new int[n + 1];
-// int[] dp = new int[n + 1];
-//
-// for (int i = 1; i <= n; i++)
-// cost[i] = s.nextInt();
-//
-// for (int i = 1; i <= n; i++)
-// for (int j = i; j <= n; j++)
-// dp[j] = dp[j] > dp[j - i] + cost[i] ? dp[j] : dp[j - i] + cost[i];
-//
-// System.out.println(dp[n]);
-//
-// s.close();
-// }
