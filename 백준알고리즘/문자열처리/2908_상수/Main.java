@@ -15,8 +15,6 @@ public class Main {
 		String n = st.nextToken();
 		String m = st.nextToken();
 
-		
-
 		in.close();
 
 	}
